@@ -1,0 +1,60 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_price_calc(object):
+    def __init__(self):
+        self.setupUi(self)
+        
+    def setupUi(self, price_calc):
+        price_calc.setObjectName("price_calc")
+        price_calc.resize(515, 323)
+        self.centralwidget = QtWidgets.QWidget(price_calc)
+        self.centralwidget.setObjectName("centralwidget")
+        self.baseprice = QtWidgets.QLineEdit(self.centralwidget)
+        self.baseprice.setGeometry(QtCore.QRect(90, 110, 161, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.baseprice.setFont(font)
+        self.baseprice.setText("")
+        self.baseprice.setObjectName("baseprice")
+        self.price_calc_label = QtWidgets.QLabel(self.centralwidget)
+        self.price_calc_label.setGeometry(QtCore.QRect(130, 30, 271, 51))
+        font = QtGui.QFont()
+        font.setPointSize(22)
+        self.price_calc_label.setFont(font)
+        self.price_calc_label.setObjectName("price_calc_label")
+        self.pricechanged_label = QtWidgets.QLabel(self.centralwidget)
+        self.pricechanged_label.setGeometry(QtCore.QRect(30, 240, 181, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pricechanged_label.setFont(font)
+        self.pricechanged_label.setObjectName("pricechanged_label")
+        self.tax = QtWidgets.QLineEdit(self.centralwidget)
+        self.tax.setGeometry(QtCore.QRect(280, 110, 161, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.tax.setFont(font)
+        self.tax.setObjectName("tax")
+        self.submit = QtWidgets.QPushButton(self.centralwidget)
+        self.submit.setGeometry(QtCore.QRect(150, 170, 101, 28))
+        self.submit.setObjectName("submit")
+        self.back = QtWidgets.QPushButton(self.centralwidget)
+        self.back.setGeometry(QtCore.QRect(270, 170, 101, 28))
+        self.back.setObjectName("back")
+        price_calc.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(price_calc)
+        self.statusbar.setObjectName("statusbar")
+        price_calc.setStatusBar(self.statusbar)
+
+        self.retranslateUi(price_calc)
+        QtCore.QMetaObject.connectSlotsByName(price_calc)
+
+    def retranslateUi(self, price_calc):
+        _translate = QtCore.QCoreApplication.translate
+        price_calc.setWindowTitle(_translate("price_calc", "MainWindow"))
+        self.baseprice.setPlaceholderText(_translate("price_calc", "Base Price (Rs.)"))
+        self.price_calc_label.setText(_translate("price_calc", "Price Calculation"))
+        self.pricechanged_label.setText(_translate("price_calc", "Price Changed!"))
+        self.tax.setPlaceholderText(_translate("price_calc", "Tax (%)"))
+        self.submit.setText(_translate("price_calc", "Submit"))
+        self.back.setText(_translate("price_calc", "Cancel"))

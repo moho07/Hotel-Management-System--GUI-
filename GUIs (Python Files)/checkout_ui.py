@@ -1,0 +1,61 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_checkout(object):
+    def __init__(self):
+        self.setupUi(self)
+        
+    def setupUi(self, checkout):
+        checkout.setObjectName("checkout")
+        checkout.resize(516, 326)
+        self.centralwidget = QtWidgets.QWidget(checkout)
+        self.centralwidget.setObjectName("centralwidget")
+        self.checkout_label = QtWidgets.QLabel(self.centralwidget)
+        self.checkout_label.setGeometry(QtCore.QRect(190, 20, 171, 51))
+        font = QtGui.QFont()
+        font.setPointSize(22)
+        self.checkout_label.setFont(font)
+        self.checkout_label.setObjectName("checkout_label")
+        self.guest_submit = QtWidgets.QPushButton(self.centralwidget)
+        self.guest_submit.setGeometry(QtCore.QRect(80, 170, 161, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.guest_submit.setFont(font)
+        self.guest_submit.setObjectName("guest_submit")
+        self.guestidnotfound_label = QtWidgets.QLabel(self.centralwidget)
+        self.guestidnotfound_label.setEnabled(True)
+        self.guestidnotfound_label.setGeometry(QtCore.QRect(20, 240, 271, 21))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.guestidnotfound_label.setFont(font)
+        self.guestidnotfound_label.setObjectName("guestidnotfound_label")
+        self.back = QtWidgets.QPushButton(self.centralwidget)
+        self.back.setGeometry(QtCore.QRect(280, 170, 161, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.back.setFont(font)
+        self.back.setObjectName("back")
+        self.guestid = QtWidgets.QLineEdit(self.centralwidget)
+        self.guestid.setGeometry(QtCore.QRect(130, 110, 251, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.guestid.setFont(font)
+        self.guestid.setObjectName("guestid")
+        checkout.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(checkout)
+        self.statusbar.setObjectName("statusbar")
+        checkout.setStatusBar(self.statusbar)
+
+        self.retranslateUi(checkout)
+        QtCore.QMetaObject.connectSlotsByName(checkout)
+
+    def retranslateUi(self, checkout):
+        _translate = QtCore.QCoreApplication.translate
+        checkout.setWindowTitle(_translate("checkout", "MainWindow"))
+        self.checkout_label.setText(_translate("checkout", "Check Out"))
+        self.guest_submit.setText(_translate("checkout", "Submit"))
+        self.guestidnotfound_label.setToolTip(_translate("checkout", "<html><head/><body><p>Name</p></body></html>"))
+        self.guestidnotfound_label.setWhatsThis(_translate("checkout", "<html><head/><body><p>Name</p></body></html>"))
+        self.guestidnotfound_label.setText(_translate("checkout", "Invalid Guest ID! Please Try Again!"))
+        self.back.setText(_translate("checkout", "Cancel"))
+        self.guestid.setPlaceholderText(_translate("checkout", "                  Guest ID"))
