@@ -13,7 +13,7 @@ This is a fully functional Hotel Management System with a user interface written
 
 1. Please install python and an sql server along with the above dependencies
 2. Download the Project as .Zip and extract it
-3. Restore the database backup found in the dumps folder in the repository using MySQL Workbench
+3. Restore the database backup found in the Dump20220523 folder in the repository using MySQL Workbench
 5. Run the .main file
 
 # Features:
